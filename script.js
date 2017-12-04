@@ -1,5 +1,5 @@
 $(function() {
-	$('.window').on('mousedown', function (e) {
+	$('.icon_container, .window').on('mousedown', function (e) {
 
 	    $(this).addClass('active');
 	    
@@ -23,4 +23,14 @@ $(function() {
 	    
 	    return false;    
 	});
+
+	function updateClock() {
+    var now = new Date();
+    time = now.getHours() + ':' + ((now.getMinutes()<10?'0':'') + now.getMinutes());
+    $('.time').text(time);
+    setTimeout(updateClock, 1000);
+	}
+
+	updateClock();
+
 });
