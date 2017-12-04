@@ -1,7 +1,7 @@
 $(function() {
-	$('.icon_container, .window').on('mousedown', function (e) {
+	$('.top_bar, .icon').on('mousedown', function (e) {
 
-	    $(this).addClass('active');
+	    $(this).parent().addClass('active');
 	    
 	    var oTop = e.pageY - $('.active').offset().top;
 	    var oLeft = e.pageX - $('.active').offset().left;
