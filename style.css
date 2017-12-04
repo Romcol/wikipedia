@@ -83,6 +83,7 @@ body{
 
 #menu_bottom .time{
 	text-align: right;
+	font-weight: bold;
 }
 
 .window{
@@ -111,4 +112,14 @@ body{
 .bottom {
 	float: left;
 	background-color : #bde3fa;
+}
+
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:10pt;
+	font-family:Verdana;
+	font-weight:italic;
+	color:808066;
 }
