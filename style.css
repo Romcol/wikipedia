@@ -51,6 +51,7 @@ body{
 	background-color : #bde3fa;
 	overflow-y: hidden;
 	overflow-x: hidden;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 #menu_bottom{
@@ -67,6 +68,7 @@ body{
 
 .icon img{
 	height: 100px;
+	cursor: move;
 }
 
 .icon_container .text{
@@ -75,10 +77,13 @@ body{
 
 #menu_bottom .start{
 	float: left;
+	font-weight: bold;
+	font-style: italic;
 }
 
 #menu_bottom .time{
 	text-align: right;
+	font-weight: bold;
 }
 
 .window{
@@ -110,5 +115,15 @@ body{
 }
 
 .window a:hover.close_popin {
-    color:red;
+    color: red;
+}
+
+.spanstyle {
+	position:absolute;
+	visibility:visible;
+	top:-50px;
+	font-size:10pt;
+	font-family:Verdana;
+	font-weight:italic;
+	color:#808066;
 }

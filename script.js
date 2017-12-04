@@ -1,7 +1,6 @@
 $(function() {
-
 	// Rendre pop-in cliquable
-	$('.icon_container, .top_bar').on('mousedown', function (e) {
+    $('.top_bar, .icon').on('mousedown', function (e) {
 	    $(this).parent().addClass('active');
 
 	    var oTop = e.pageY - $('.active').offset().top;
@@ -19,6 +18,7 @@ $(function() {
 	    return false;
 	});
 
+    // Fermer une pop-in
 	$('.close_popin').click(function () {
 		var t = $(this).parent()[0];
 		console.log(t.getAttribute("class"));
@@ -37,6 +37,5 @@ $(function() {
 		$('.time').text(time);
 		setTimeout(updateClock, 1000);
 	}
-
 	updateClock();
 });
