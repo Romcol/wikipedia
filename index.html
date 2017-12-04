@@ -52,7 +52,7 @@ window.onload=makebanner;
 <body>
 
 
-<script language="JavaScript1.2">
+<!--<script language="JavaScript1.2">
 for (i=0;i<message.length;i++) {
 document.write("<span id='span"+i+"' class='spanstyle'>")
 document.write(message[i])
@@ -63,21 +63,7 @@ document.captureEvents(Event.MOUSEMOVE);
 }
 document.onmousemove = handlerMM;
 
-</script>
-
-<style type="text/css">
-<!--
-.spanstyle {
-position:absolute;
-visibility:visible;
-top:-50px;
-font-size:10pt;
-font-family:Verdana;
-font-weight:italic;
-color:808066;
-}
--->
-</style>
+</script>-->
 <!doctype html>
 
 <html lang="fr">
@@ -100,15 +86,24 @@ color:808066;
 <body>
 
 	<div id="desktop">
-		<div class="icon_container"><div class="icon discover"><img alt="Discover" src="img/INTRO.svg"/><div class="text">Discover</div></div></div>
+
+	<div class="icon_container"><div class="icon" id="discover"><img alt="Discover" src="img/intro.svg"/><div class="text">Discover</div></div></div>
+
+	<div class="icon_container"><div class="icon wiki"><img alt="Wikipedia" src="img/lien_wiki.svg"/></div></div>
+
+	<div class="icon_container"><div class="icon poste_travail" id="poste_travail"><img alt="Poste de travail" src="img/poste_de_travail.svg"/><div class="text">Poste de travail</div></div></div>
+
+	<div class="icon_container"><div class="icon corbeille" id="corbeille"><img alt="Corbeille" src="img/corbeille.svg"/><div class="text">Corbeille</div></div></div>
 	
-	<div class="window"><div class="top_bar"><div class="title">Pop-in #1</div><div class="controls">_ &#9633; X</div></div></div>
-	
-	<div class="window"><div class="top_bar"><div class="title">Pop-in #2</div><div class="controls">_ &#9633; X</div></div></div>
+	<div class="window" id="discover_window"><div class="top_bar"><div class="title">DISCOVER</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div></div>
+
+	<div class="window" id="poste_travail_window"><div class="top_bar"><div class="title">POSTE DE TRAVAIL</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div></div>
+
+	<div class="window" id="corbeille_window"><div class="top_bar"><div class="title">CORBEILLE</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div></div>
 
 	</div>
 	
-	<div id="menu_bottom"><div class="start">Démarrer</div><div class="time"></div> </div>
+	<div id="menu_bottom"><div class="start">Démarrer</div><div class="bottom_container"></div><div class="time"></div> </div>
 
 </body>
 </html>

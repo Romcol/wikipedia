@@ -60,6 +60,8 @@ body{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	padding: 0 10px 0 10px;
+	box-sizing: border-box;
 }
 
 .icon_container {
@@ -68,50 +70,97 @@ body{
 
 .icon img{
 	height: 100px;
-	cursor: move;
+	cursor: pointer;
 }
 
 .icon_container .text{
 	text-align: center;
+	padding: 5px 0 5px 0;
 }
 
 #menu_bottom .start{
-	float: left;
 	font-weight: bold;
 	font-style: italic;
+	display: inline-block;
+	line-height: 30px;
+	cursor: pointer;
+	float: left;
 }
 
 #menu_bottom .time{
+	float: right;
 	text-align: right;
 	font-weight: bold;
+	display: inline-block;
+	line-height: 30px;
 }
 
 .window{
 	border: 2px solid white;
-	width: 200px;
-	height: 200px;
+	width: 300px;
+	height: 300px;
 	z-index: 20;
 	background-color :  #ffffff;
 }
 
 .window .title{
 	float:left;
+	font-weight: bold;
+	line-height: 30px;
+	padding-left: 5px;
 }
 
 .window .controls{
-	text-align: right;
+	float:right;
+	padding:5px;
+}
+
+.controls .reduce{
+	display:inline-block;
+	border-bottom: 3px solid white;
+	height: 10px;
+	width: 10px;
+	margin-right: 5px;
+}
+
+.controls .expand{
+	display:inline-block;
+	border: 3px solid white;
+	height: 10px;
+	width: 10px;
+	margin-right: 5px;
+}
+
+.controls .close{
+	background: url("img/close.svg");
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	height: 16px;
+	width: 16px;
+	display:inline-block;
 }
 
 .window .top_bar{
 	height: 30px;
 	background-color: #f2cfe3;
-	cursor: move;
+	cursor: pointer;
 	color: white;
 }
 
-.bottom {
+.bottom_container{
 	float: left;
+	margin-left: 10px;
+}
+
+.bottom {
+	display: inline-block;
 	background-color : #bde3fa;
+	color : white;
+	border: 2px solid white;
+	color : white;
+	cursor: pointer;
+	padding: 5px;
+	color: white;
 }
 
 .spanstyle {
@@ -122,4 +171,21 @@ body{
 	font-family:Verdana;
 	font-weight:italic;
 	color:808066;
+}
+
+.window{
+	position: absolute;
+	top : 50%;
+	left : 50%;
+	display: none;
+}
+
+.window_above{
+	z-index: 30;
+}
+
+.bottom_above{
+	background-color : white;
+	color: #bde3fa;
+	border: 2px solid #bde3fa;
 }
