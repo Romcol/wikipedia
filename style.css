@@ -49,6 +49,8 @@ table {
 
 body{
 	background-color : #bde3fa;
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 #menu_bottom{
@@ -59,8 +61,16 @@ body{
 	width: 100%;
 }
 
+.icon_container {
+	display:inline-block;
+}
+
 .icon img{
 	height: 100px;
+}
+
+.icon_container .text{
+	text-align: center;
 }
 
 #menu_bottom .start{
@@ -76,6 +86,7 @@ body{
 	width: 200px;
 	height: 200px;
 	z-index: 20;
+	background-color :  #ffffff;
 }
 
 .window .title{
@@ -91,4 +102,9 @@ body{
 	background-color: #f2cfe3;
 	cursor: move;
 	color: white;
+}
+
+.bottom {
+	float: left;
+	background-color : #bde3fa;
 }
