@@ -108,3 +108,7 @@ body{
 	float: left;
 	background-color : #bde3fa;
 }
+
+.window a:hover.close_popin {
+    color:red;
+}
