@@ -43,7 +43,10 @@ $(function() {
     tab['discover'] = 'DISCOVER';
     tab['poste_travail'] = 'POSTE DE TRAVAIL';
     tab['corbeille'] = 'CORBEILLE';
-    tab['q1'] = 'QUESTION 1';
+    tab['q1']			= 'QUESTION 1';
+	tab['q1_visual']	= 'VISUEL';
+	tab['q1_about']		= 'A PROPOS';
+	tab['q1_more']		= 'ALLER PLUS LOIN';
     tab['q2'] = 'QUESTION 2';
     tab['q3'] = 'Contributions';
     tab['erreur'] = 'ERREUR';
