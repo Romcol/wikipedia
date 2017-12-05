@@ -222,3 +222,15 @@ body{
 .icon_container.active .text{
 	background-color : blue;
 }
+
+#monkey{
+	display: none;
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+  	left: 50%;
+  	height: 720px;
+  	width: 800px;
+  	margin-top: -400px;
+  	margin-left: -360px;
+}
