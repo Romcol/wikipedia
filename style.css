@@ -223,6 +223,11 @@ body{
 	background-color : blue;
 }
 
+.wikipGray {
+	filter: grayscale(100%);
+	cursor: help !important;
+}
+
 #monkey{
 	display: none;
 	position: absolute;
