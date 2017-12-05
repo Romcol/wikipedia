@@ -1,0 +1,130 @@
+<script language="JavaScript1.2">
+var x,y
+var kern=20 
+var flag=0
+var message="Welcome to "
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<message.length;i++) {
+  xpos[i]=-50
+  }
+var ypos=new Array()
+for (i=0;i<message.length;i++) {
+  ypos[i]=-50
+  }
+function handlerMM(e){
+  x = (e) ? e.pageX : document.body.scrollLeft+event.clientX
+  y = (e) ? e.pageY : document.body.scrollTop+event.clientY
+  flag=1
+  }
+function makebanner() {
+  if (flag==1) {
+    for (i=message.length-1; i>=1; i--) {
+      xpos[i]=xpos[i-1]+kern
+      ypos[i]=ypos[i-1]
+      }
+    xpos[0]=x+kern
+    ypos[0]=y
+    for (i=0; i<message.length; i++) {
+      if (document.getElementById) {
+        var thisspan = document.getElementById("span"+i).style
+        } else {
+        var thisspan = eval((document.layers)?"document.span"+i:"span"+(i)+".style")
+        }
+      if (thisspan.posLeft) {
+        thisspan.posLeft=xpos[i]
+        thisspan.posTop=ypos[i]
+        }
+      if (!thisspan.posLeft) {
+        thisspan.left=xpos[i]
+        thisspan.top=ypos[i]
+        }
+      }
+    }
+    var timer=setTimeout("makebanner()",30)
+  }
+window.onload=makebanner;
+</script>
+
+</head>
+
+<body>
+
+
+<!--<script language="JavaScript1.2">
+for (i=0;i<message.length;i++) {
+document.write("<span id='span"+i+"' class='spanstyle'>")
+document.write(message[i])
+document.write("</span>")
+}
+if (document.layers){
+document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+</script>-->
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+
+  <title>Wikipedia</title>
+  <meta name="description" content="Wikipedia Project">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+  <div id="desktop">
+
+  <div class="icon_container"><div class="icon q11" id="Q11"><img alt="Q11" src="img/Q11.svg"/><div class="text">Q11</div></div></div>
+
+  <div class="icon_container"><div class="icon q33" id="Q33"><img alt="Q33" src="img/Q33.svg"/><div class="text">Q33</div></div></div>
+
+  <div class="window" id="Q11_window"><div class="top_bar"><div class="title">Q11</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>
+  <link rel="stylesheet" type="text/css" href="radioRange.css"
+    <div class="content">   
+      <div class="question">En 2017, sur 100 contributeurs/contributrices de Wikipedia, combien y a t-il de femmes</div>
+      <div class="info">Placez le curser sur le nombre qui vous semble correct</div>
+      <p id="jaugeValue" >0</p>
+      <script type="text/javascript">
+        function updateTextInput(val) {
+          document.getElementById("jaugeValue").innerHTML = val; 
+        }
+      </script>
+      <input class="jauge" type="range" value="0" max="100" min="0" step="5" onchange="updateTextInput(this.value);">
+      <input type = "button" value="Valider">
+    </div>
+  </div>
+
+  <div class="window" id="Q33_window"><div class="top_bar"><div class="title">Q33</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>
+    <div class="content">   
+      <div class="question">Sur 100 contributeurs/contributrices de Wikipedia en 2017, combien y a t-il de femmes</div>
+      <div class="info">Selectionnez la bonne réponse</div>
+      <form>
+        <label><input type="radio" class="option-input radio" name="example" checked />20</label>
+        <label><input type="radio" class="option-input radio" name="example" />40</label>
+        <label><input type="radio" class="option-input radio" name="example" />60</label>
+      </form>
+      <form   margin="20px">
+        <label><input type="radio" class="option-input2 radio" name="example" checked />20</label>
+        <label><input type="radio" class="option-input2 radio" name="example" />40</label>
+        <label><input type="radio" class="option-input2 radio" name="example" />60</label>
+      </form>
+      <input type = "button" value="Valider">
+    </div>
+  </div>
+  </div>
+  
+  <div id="menu_bottom"><div class="start">Démarrer</div><div class="bottom_container"></div><div class="time"></div> </div>
+
+</body>
+</html>
