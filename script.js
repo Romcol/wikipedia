@@ -7,7 +7,9 @@ $(function() {
 	    var oTop = e.pageY - $('.active').offset().top;
 	    var oLeft = e.pageX - $('.active').offset().left;
 
-	    console.log('mouseup');
+	    $(this).on('mouseup', function(e){
+	    	$(this).parent().removeClass('active');
+	    });
 	    
 	    $(this).parents().on('mousemove', function (e) {
 
@@ -23,6 +25,8 @@ $(function() {
 	        });
 	        
 	    });
+
+	    return false;
 	});
 
 	function updateClock() {
