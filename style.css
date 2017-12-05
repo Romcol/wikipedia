@@ -113,6 +113,11 @@ body{
 	background-color :  #ffffff;
 }
 
+#q1_window, #q2_window{
+	width : 700px;
+	height: 350px;
+}
+
 .window .title{
 	float:left;
 	font-weight: bold;

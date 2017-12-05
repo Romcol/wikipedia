@@ -39,6 +39,8 @@ $(function() {
 	tab['discover'] = 'DISCOVER';
 	tab['poste_travail'] = 'POSTE DE TRAVAIL';
 	tab['corbeille'] = 'CORBEILLE';
+	tab['q1'] = 'QUESTION 1';
+	tab['q2'] = 'QUESTION 2';
 
 	var active = [];
 

@@ -80,6 +80,7 @@ document.onmousemove = handlerMM;
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="poste_de_travail.css">
+  <link rel="stylesheet" href="radio_range.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -100,6 +101,10 @@ document.onmousemove = handlerMM;
 
         <div class="icon_container"><div class="icon corbeille" id="corbeille"><img alt="Corbeille" src="img/corbeille.svg"/><div class="text">Corbeille</div></div></div>
 
+        <div class="icon_container"><div class="icon q1" id="q1"><img alt="Question 1" src="img/q1.svg"/><div class="text">Question 1</div></div></div>
+
+        <div class="icon_container"><div class="icon q2" id="q2"><img alt="Question 2" src="img/q2.svg"/><div class="text">Question 2</div></div></div>
+
         <div class="window" id="discover_window"><div class="top_bar"><div class="title">DISCOVER</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>Ta maman la coquine</div>
 
         <div class="window" id="poste_travail_window"><div class="top_bar"><div class="title">POSTE DE TRAVAIL</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div><div class="fad-container">
@@ -114,6 +119,43 @@ document.onmousemove = handlerMM;
 			</div></div>
 
         <div class="window" id="corbeille_window"><div class="top_bar"><div class="title">CORBEILLE</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div></div>
+
+         <div class="window" id="q1_window"><div class="top_bar"><div class="title">QUESTION 1</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>
+
+       <div class="content">   
+      <div class="question">En 2017, sur 100 contributeurs/contributrices de Wikipedia, combien y a t-il de femmes</div>
+      <div class="info">Placez le curser sur le nombre qui vous semble correct</div>
+      <p id="jaugeValue" >0</p>
+      <script type="text/javascript">
+        function updateTextInput(val) {
+          document.getElementById("jaugeValue").innerHTML = val; 
+        }
+      </script>
+      <input class="jauge" type="range" value="0" max="100" min="0" step="5" onchange="updateTextInput(this.value);">
+      <input type = "button" value="Valider">
+    </div>
+
+     </div>
+
+    <div class="window" id="q2_window"><div class="top_bar"><div class="title">QUESTION 2</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>
+
+    <div class="content">   
+      <div class="question">Sur 100 contributeurs/contributrices de Wikipedia en 2017, combien y a t-il de femmes</div>
+      <div class="info">Selectionnez la bonne réponse</div>
+      <form>
+        <label><input type="radio" class="option-input radio" name="example" checked />20</label>
+        <label><input type="radio" class="option-input radio" name="example" />40</label>
+        <label><input type="radio" class="option-input radio" name="example" />60</label>
+      </form>
+      <form   margin="20px">
+        <label><input type="radio" class="option-input2 radio" name="example" checked />20</label>
+        <label><input type="radio" class="option-input2 radio" name="example" />40</label>
+        <label><input type="radio" class="option-input2 radio" name="example" />60</label>
+      </form>
+      <input type = "button" value="Valider">
+    </div>
+
+
     </div>
 
     <div id="menu_bottom"><div class="start">Démarrer</div><div class="bottom_container"></div><div class="time"></div> </div>
