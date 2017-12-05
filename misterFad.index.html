@@ -1,0 +1,179 @@
+<script>
+var x,y
+var kern=10 
+var flag=0
+var message="Rendez-vous sur l'icône discover, je dis ça, je dis rien..."
+
+message=message.split("")
+
+var xpos=new Array()
+for (i=0;i<message.length;i++) {
+	xpos[i]=-50
+	}
+
+var ypos=new Array()
+for (i=0;i<message.length;i++) {
+	ypos[i]=-50
+	}
+
+function handlerMM(e){
+	x = (e) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (e) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+	}
+
+function makebanner() {
+	if (flag==1) {
+		for (i=message.length-1; i>=1; i--) {
+			xpos[i]=xpos[i-1]+kern
+			ypos[i]=ypos[i-1]
+			}
+		xpos[0]=x+kern
+		ypos[0]=y
+		for (i=0; i<message.length; i++) {
+			if (document.getElementById) {
+				var thisspan = document.getElementById("span"+i).style
+				} else {
+				var thisspan = eval((document.layers)?"document.span"+i:"span"+(i)+".style")
+				}
+			if (thisspan.posLeft) {
+				thisspan.posLeft=xpos[i]
+				thisspan.posTop=ypos[i]
+				}
+			if (!thisspan.posLeft) {
+				thisspan.left=xpos[i]
+				thisspan.top=ypos[i]
+				}
+			}
+		}
+		var timer=setTimeout("makebanner()",20)
+	}
+
+window.onload=makebanner;
+
+for (i=0;i<message.length;i++) {
+	document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+	document.write("</span>")
+}
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+
+//document.onmousemove = handlerMM;
+
+</script>
+
+</head>
+
+<body>
+
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+
+  <title>Wikipedia</title>
+  <meta name="description" content="Wikipedia Project">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="script.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<div id="desktop">
+        <div class="icon_container"><div class="icon" id="discover"><img alt="Discover" src="img/intro.svg"/><div class="text">Discover</div></div></div>
+
+        <div class="icon_container"><div class="icon wiki"><img alt="Wikipedia" src="img/lien_wiki.svg"/></div></div>
+
+        <div class="icon_container"><div class="icon poste_travail" id="poste_travail"><img alt="Poste de travail" src="img/poste_de_travail.svg"/><div class="text">Poste de travail</div></div></div>
+
+        <div class="icon_container"><div class="icon corbeille" id="corbeille"><img alt="Corbeille" src="img/corbeille.svg"/><div class="text">Corbeille</div></div></div>
+
+        <div class="window" id="discover_window"><div class="top_bar"><div class="title">DISCOVER</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>
+		</div>
+
+        <div class="window" id="poste_travail_window"><div class="top_bar"><div class="title">POSTE DE TRAVAIL</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>
+			<link rel="stylesheet" href="misterFad.style.css">
+			<div class="fad-container">
+				<div class="fad-inner">
+					<div id="a" class="fad-child fad-centered" style="background-color: red;">Sources</div>
+					<div id="b" class="fad-child fad-centered" style="background-color: green;">Crédit audio</div>
+					<div id="c" class="fad-child fad-centered" style="background-color: blue;">Liste des participants</div>
+				</div>
+				<form>
+					<textarea readonly id="area" class="fad-textarea">Some text...</textarea>
+				</form>
+			</div>
+			<script>
+				/*https://stackoverflow.com/a/805113*/
+				const aText = `
+Christian Vandendorpe, « Le phénomène Wikipédia : une utopie en marche », Le
+Débat 2008/1 (n° 148), p. 17-30.
+DOI 10.3917/deba.148.0017
+
+Bernard Jacquemin, « Chapitre 7. Un dispositif de collaboration : l'exemple de
+Wikipédia », in Violaine Appel et al., Les dispositifs d’information et de
+communication, De Boeck Supérieur « Culture & Communication », 2010 (),
+p. 117-136.
+DOI 10.3917/dbu.masso.2010.01.0117 
+
+Emmanuel Ruzé, « Nouvelles des archives. Une approche quantitative des archives
+numériques d'un projet encyclopédique, Wikipédia », Entreprises et histoire 2011/2
+(n° 63), p. 86-99.
+DOI 10.3917/eh.063.0086
+
+Pierre-Carl Langlais, « La négociation contre la démocratie : le cas Wikipedia »,
+Négociations 2014/1 (n° 21), p. 21-34.
+DOI 10.3917/neg.021.0021
+
+“It’s a Man’s Wikipedia? Assessing Gender Inequality in an Online Encyclopedia.” Leigniz Institute for the Social Sciences. https://arxiv.org/pdf/1501.06307.pdf 
+
+https://www.courrierinternational.com/article/egalite-ou-sont-les-femmes-sur-wikipedia
+
+http://mashable.france24.com/monde/20161208-wikipedia-bbc-inegalites-hommes-femmes 
+
+http://www.slate.fr/story/96963/wikipedia
+				`;
+				
+				const bText = `
+Rien à signaler
+				`;
+				
+				const cText = `
+Fadyl, Marlène, William et Romain : Traitement des données et développement web
+
+Marion et Thibault : Recherche documentaire, éditorialisation et rédaction du contenu
+
+Emmanuelle, Rozenn et Ninon : Création de l’interface graphique
+				`;
+				
+				$("#a").click(function() {
+					$( "#area" ).val(aText);
+					$( "#area" ).slideUp();
+					$( "#area" ).slideDown();
+				});
+				
+				$("#b").click(function() {
+					$( "#area" ).val(bText);
+				});
+				
+				$("#c").click(function() {
+					$( "#area" ).val(cText);
+				});
+			</script>
+		</div>
+
+        <div class="window" id="corbeille_window"><div class="top_bar"><div class="title">CORBEILLE</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div></div>
+    </div>
+
+    <div id="menu_bottom"><div class="start">Démarrer</div><div class="bottom_container"></div><div class="time"></div> </div>
+</body>
+</html>

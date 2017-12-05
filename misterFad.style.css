@@ -1,0 +1,41 @@
+
+/* https://stackoverflow.com/a/37131 */
+
+.fad-container {
+	/*background-color: gray;*/
+	overflow: hidden;
+	width: 300px;
+}
+
+.fad-inner {
+	overflow: hidden;
+	width: 300px;
+}
+
+.fad-child {
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+
+/* https://stackoverflow.com/a/33622337 */
+
+.fad-centered {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* https://www.w3schools.com/css/css_form.asp
+   see Styling Textareas */
+
+.fad-textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
