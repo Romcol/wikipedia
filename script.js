@@ -46,6 +46,7 @@ $(function() {
     tab['q1'] = 'QUESTION 1';
     tab['q2'] = 'QUESTION 2';
     tab['q3'] = 'Contributions';
+    tab['erreur'] = 'ERREUR';
 
 
     var active = [];
@@ -78,17 +79,6 @@ $(function() {
             active[id] = false;
             e.stopPropagation();
         });
-
-		$('.icon').on('dblclick', function (e) {
-			var id = $(this).attr('id');
-			if(id == 'wiki')
-			{
-				manage_window('erreur');
-			}
-			else{
-				manage_window(id);
-			}
-		});
 
 		$('#'+id+'_window'+' .button_close').on('click', function (e) {
 			console.log('test');
@@ -123,11 +113,17 @@ $(function() {
     }
 
 
-    $('.icon').on('dblclick', function (e) {
-        var id = $(this).attr('id');
-        manage_window(id);
-    });
-
+	$('.icon').on('dblclick', function (e) {
+		var id = $(this).attr('id');
+		if(id == 'wiki')
+		{
+			manage_window('erreur');
+		}
+		else{
+			manage_window(id);
+		}
+	});
+	
     $(".start").click(function(e){
         $('#monkey').show(0).delay(2000).hide(0);
     });
