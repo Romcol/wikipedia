@@ -130,7 +130,7 @@ $(function() {
 
 //POSTE DE TRAVAIL
 
-    const text1 = `
+const text1 = `
 Christian Vandendorpe, « Le phénomène Wikipédia : une utopie en marche », Le
 Débat 2008/1 (n° 148), p. 17-30.
 DOI 10.3917/deba.148.0017
@@ -158,31 +158,31 @@ http://mashable.france24.com/monde/20161208-wikipedia-bbc-inegalites-hommes-femm
 
 http://www.slate.fr/story/96963/wikipedia
 				`;
-
-    const text2 = `
+				
+const text2 = `
 Rien à signaler`;
-
-    const text3 = `
+				
+const text3 = `
 Fadyl, Marlène, William et Romain : Traitement des données et développement web
 
 Marion et Thibault : Recherche documentaire, éditorialisation et rédaction du contenu
 
 Emmanuelle, Rozenn et Ninon : Création de l’interface graphique
 `;
+				
+$("#desktop_source").click(function() {
+	$( "#area" ).val(text1);
+});
 
-    $("#desktop_source").click(function() {
-        $( "#area" ).val(text1);
-    });
+$("#desktop_audio").click(function() {
+	$( "#area" ).val(text2);
+	$( "#area" ).slideUp();
+	$( "#area" ).slideDown();
+});
 
-    $("#desktop_audio").click(function() {
-        $( "#area" ).val(text2);
-        $( "#area" ).slideUp();
-        $( "#area" ).slideDown();
-    });
-
-    $("#desktop_contributors").click(function() {
-        $( "#area" ).val(text3);
-    });
+$("#desktop_contributors").click(function() {
+	$( "#area" ).val(text3);
+});
 
 //END - POSTE DE TRAVAIL
 
@@ -191,7 +191,7 @@ var bonneRepQ1 = 16;
 const suivant = "Suivant";
 $("#ValidationQ1").click(function() {
 	if($("#ValidationQ1").text() === suivant) {
-		manage_window("visual");
+		manage_window("q1_visual");
 		return;
 	}
 
@@ -209,11 +209,11 @@ $("#ValidationQ1").click(function() {
 });
 
 $("#ValidationQ1Visual").click(function() {
-	manage_window("about");
+	manage_window("q1_about");
 });
 
 $("#ValidationQ1About").click(function() {
-	manage_window("more");
+	manage_window("q1_more");
 });
 
 $("#ValidationQ1More").click(function() {
