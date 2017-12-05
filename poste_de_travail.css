@@ -1,8 +1,5 @@
 
-/* https://stackoverflow.com/a/37131 */
-
 .fad-container {
-	/*background-color: gray;*/
 	overflow: hidden;
 	width: 300px;
 }
@@ -18,16 +15,11 @@
 	height: 100px;
 }
 
-/* https://stackoverflow.com/a/33622337 */
-
 .fad-centered {
 	display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/* https://www.w3schools.com/css/css_form.asp
-   see Styling Textareas */
 
 .fad-textarea {
     width: 100%;

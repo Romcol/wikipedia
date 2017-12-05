@@ -1,0 +1,68 @@
+			<link rel="stylesheet" href="poste_de_travail.css">
+			<div class="fad-container">
+				<div class="fad-inner">
+					<div id="a" class="fad-child fad-centered" style="background-color: red;">Sources</div>
+					<div id="b" class="fad-child fad-centered" style="background-color: green;">Crédit audio</div>
+					<div id="c" class="fad-child fad-centered" style="background-color: blue;">Liste des participants</div>
+				</div>
+				<form>
+					<textarea readonly id="area" class="fad-textarea">Some text...</textarea>
+				</form>
+			</div>
+
+			<script>
+				const aText = `
+Christian Vandendorpe, « Le phénomène Wikipédia : une utopie en marche », Le
+Débat 2008/1 (n° 148), p. 17-30.
+DOI 10.3917/deba.148.0017
+
+Bernard Jacquemin, « Chapitre 7. Un dispositif de collaboration : l'exemple de
+Wikipédia », in Violaine Appel et al., Les dispositifs d’information et de
+communication, De Boeck Supérieur « Culture & Communication », 2010 (),
+p. 117-136.
+DOI 10.3917/dbu.masso.2010.01.0117 
+
+Emmanuel Ruzé, « Nouvelles des archives. Une approche quantitative des archives
+numériques d'un projet encyclopédique, Wikipédia », Entreprises et histoire 2011/2
+(n° 63), p. 86-99.
+DOI 10.3917/eh.063.0086
+
+Pierre-Carl Langlais, « La négociation contre la démocratie : le cas Wikipedia »,
+Négociations 2014/1 (n° 21), p. 21-34.
+DOI 10.3917/neg.021.0021
+
+“It’s a Man’s Wikipedia? Assessing Gender Inequality in an Online Encyclopedia.” Leigniz Institute for the Social Sciences. https://arxiv.org/pdf/1501.06307.pdf 
+
+https://www.courrierinternational.com/article/egalite-ou-sont-les-femmes-sur-wikipedia
+
+http://mashable.france24.com/monde/20161208-wikipedia-bbc-inegalites-hommes-femmes 
+
+http://www.slate.fr/story/96963/wikipedia
+				`;
+				
+				const bText = `
+Rien à signaler
+				`;
+				
+				const cText = `
+Fadyl, Marlène, William et Romain : Traitement des données et développement web
+
+Marion et Thibault : Recherche documentaire, éditorialisation et rédaction du contenu
+
+Emmanuelle, Rozenn et Ninon : Création de l’interface graphique
+				`;
+				
+				$("#a").click(function() {
+					$( "#area" ).val(aText);
+					$( "#area" ).slideUp();
+					$( "#area" ).slideDown();
+				});
+				
+				$("#b").click(function() {
+					$( "#area" ).val(bText);
+				});
+				
+				$("#c").click(function() {
+					$( "#area" ).val(cText);
+				});
+			</script>
