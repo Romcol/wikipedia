@@ -41,21 +41,26 @@ $(function() {
 
 	function manage_window(id)
 	{
-		if(active[id]) return false;
-		active[id] = true;
+
 		$('#'+id+'_window').show();
 		$('.window').removeClass('window_above');
 		$('#'+id+'_window').addClass('window_above');
-		$('.bottom_container').append('<div class="bottom" id="'+id+'_bottom">'+tab[id]+'</div>');
+
+		if(!active[id])
+		{
+			$('.bottom_container').append('<div class="bottom" id="'+id+'_bottom">'+tab[id]+'</div>');
+		}
 
 		$('.bottom').removeClass('bottom_above');
 		$('#'+id+'_bottom').addClass('bottom_above');
 
+		active[id] = true;
+
 
 		$('#'+id+'_window'+' .close').on('click', function (e) {
-		$('#'+id+'_window').hide();
-		$('#'+id+'_bottom').remove();
-		active[id] = false;
+			$('#'+id+'_window').hide();
+			$('#'+id+'_bottom').remove();
+			active[id] = false;
 		});
 
 		$('#'+id+'_window'+' .reduce').on('click', function (e) {
