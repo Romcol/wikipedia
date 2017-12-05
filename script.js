@@ -6,6 +6,8 @@ $(function() {
 	    
 	    var oTop = e.pageY - $('.active').offset().top;
 	    var oLeft = e.pageX - $('.active').offset().left;
+
+	    console.log('mouseup');
 	    
 	    $(this).parents().on('mousemove', function (e) {
 
