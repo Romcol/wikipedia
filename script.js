@@ -1,4 +1,5 @@
 $(function() {
+
 	$('.top_bar, .icon').on('mousedown', function (e) {
 
 	    $(this).parent().addClass('active');
@@ -41,7 +42,6 @@ $(function() {
 
 	function manage_window(id)
 	{
-
 		$('#'+id+'_window').show();
 		$('.window').removeClass('window_above');
 		$('#'+id+'_window').addClass('window_above');
@@ -61,12 +61,14 @@ $(function() {
 			$('#'+id+'_window').hide();
 			$('#'+id+'_bottom').remove();
 			active[id] = false;
+			e.stopPropagation();
 		});
 
 		$('#'+id+'_window'+' .reduce').on('click', function (e) {
 			$('#'+id+'_window').hide();
 			$('#'+id+'_window').removeClass('window_above');
 			$('#'+id+'_bottom').removeClass('bottom_above');
+			e.stopPropagation();
 		});
 
 		$('#'+id+'_bottom').on('click', function(e){
