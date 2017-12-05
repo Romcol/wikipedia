@@ -186,4 +186,40 @@ Emmanuelle, Rozenn et Ninon : Création de l’interface graphique
 
 //END - POSTE DE TRAVAIL
 
+//Question 1
+var bonneRepQ1 = 16;
+const suivant = "Suivant";
+$("#ValidationQ1").click(function() {
+	if($("#ValidationQ1").text() === suivant) {
+		manage_window("visual");
+		return;
+	}
+
+	if($("#jaugeValue").text() != bonneRepQ1) {
+		$("#infoQ1").html( "Non la bonne réponse est");
+        $("#jaugeValue").html(bonneRepQ1);
+        document.getElementById("jaugeQ1").value = bonneRepQ1;
+    }
+    else {
+        $("#infoQ1").html( "Bravo !");
+    }
+
+    $("#ValidationQ1").text(suivant);
+    document.getElementById("jaugeQ1").disabled = true;
+});
+
+$("#ValidationQ1Visual").click(function() {
+	manage_window("about");
+});
+
+$("#ValidationQ1About").click(function() {
+	manage_window("more");
+});
+
+$("#ValidationQ1More").click(function() {
+	window.alert("Close all question 1 windows");
+});
+
+//END Question 1
+
 });
