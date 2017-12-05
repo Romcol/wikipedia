@@ -56,8 +56,8 @@ $(function() {
 
 		active[id] = true;
 
-
 		$('#'+id+'_window'+' .close').on('click', function (e) {
+			console.log('test');
 			$('#'+id+'_window').hide();
 			$('#'+id+'_bottom').remove();
 			active[id] = false;

@@ -1,1 +1,21 @@
-<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.26 68.41"><defs><style>.cls-1{fill:#aeafae;}.cls-1,.cls-2,.cls-3{stroke:#000;stroke-linecap:round;stroke-linejoin:round;}.cls-2{fill:silver;}.cls-3{fill:#dddede;}</style></defs><title>CORBEILLEE</title><polygon class="cls-1" points="49.76 18.66 43.22 61.8 30.67 67.91 29.5 28.79 49.76 18.66"/><polygon class="cls-1" points="0.5 9.93 6.6 50.73 30.67 67.91 29.5 28.79 0.5 9.93"/><polygon class="cls-2" points="19.36 0.5 19.5 22.29 0.5 9.93 19.36 0.5"/><polygon class="cls-3" points="29.5 28.79 49.76 18.66 19.36 0.5 19.5 22.29 29.5 28.79"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 52.3 72.5" style="enable-background:new 0 0 52.3 72.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C0C0BF;stroke:#020203;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:#DDDEDE;stroke:#020203;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{fill:#FFFFFF;stroke:#1E1E1C;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:#AEAFAE;stroke:#020203;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<polygon class="st0" points="19.5,4.3 19.7,26.1 0.7,13.7 "/>
+<polygon class="st1" points="29.7,32.6 49.9,22.4 19.5,4.3 19.7,26.1 "/>
+<polygon class="st2" points="43.4,36.7 51.5,16.7 29.5,9.3 26.4,18.2 "/>
+<polygon class="st2" points="20.4,9.3 30.1,0.9 39.8,15.2 34.7,19.8 "/>
+<polygon class="st2" points="31.7,15.2 12.5,2.1 9,16.2 "/>
+<polygon class="st2" points="17.6,2.1 45,10.7 39.7,36.7 16.5,21.3 "/>
+<polygon class="st2" points="5.8,17 4.7,7.4 24,12.8 26.2,30.3 "/>
+<polygon class="st2" points="21.1,21.1 35.5,18.4 34.7,37 14.7,38.9 "/>
+<polygon class="st3" points="49.9,22.4 43.4,65.6 30.9,71.7 29.7,32.6 "/>
+<polygon class="st3" points="0.7,13.7 6.8,54.5 30.9,71.7 29.7,32.6 "/>
+</svg>
