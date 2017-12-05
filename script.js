@@ -45,7 +45,7 @@ $(function() {
     tab['corbeille'] = 'CORBEILLE';
     tab['q1'] = 'QUESTION 1';
     tab['q2'] = 'QUESTION 2';
-    tab['q3'] = 'QUESTION 3';
+    tab['q3'] = 'Contributions';
 
 
     var active = [];
