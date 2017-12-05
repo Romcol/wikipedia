@@ -1,17 +1,21 @@
-			<link rel="stylesheet" href="poste_de_travail.css">
-			<div class="fad-container">
-				<div class="fad-inner">
-					<div id="a" class="fad-child fad-centered" style="background-color: red;">Sources</div>
-					<div id="b" class="fad-child fad-centered" style="background-color: green;">Crédit audio</div>
-					<div id="c" class="fad-child fad-centered" style="background-color: blue;">Liste des participants</div>
-				</div>
-				<form>
-					<textarea readonly id="area" class="fad-textarea">Some text...</textarea>
-				</form>
-			</div>
 
-			<script>
-				const aText = `
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script.js" type="text/javascript"></script>
+  
+<link rel="stylesheet" href="poste_de_travail.css">
+<div class="fad-container">
+	<div class="fad-inner">
+		<div id="a" class="fad-child fad-centered" style="background-color: red;">Sources</div>
+		<div id="b" class="fad-child fad-centered" style="background-color: green;">Crédit audio</div>
+		<div id="c" class="fad-child fad-centered" style="background-color: blue;">Liste des participants</div>
+	</div>
+	<form>
+		<textarea readonly id="area" class="fad-textarea">Some text...</textarea>
+	</form>
+</div>
+
+<script>
+	const aText = `
 Christian Vandendorpe, « Le phénomène Wikipédia : une utopie en marche », Le
 Débat 2008/1 (n° 148), p. 17-30.
 DOI 10.3917/deba.148.0017
@@ -40,29 +44,29 @@ http://mashable.france24.com/monde/20161208-wikipedia-bbc-inegalites-hommes-femm
 http://www.slate.fr/story/96963/wikipedia
 				`;
 				
-				const bText = `
+	const bText = `
 Rien à signaler
-				`;
-				
-				const cText = `
+	`;
+	
+	const cText = `
 Fadyl, Marlène, William et Romain : Traitement des données et développement web
 
 Marion et Thibault : Recherche documentaire, éditorialisation et rédaction du contenu
 
 Emmanuelle, Rozenn et Ninon : Création de l’interface graphique
-				`;
-				
-				$("#a").click(function() {
-					$( "#area" ).val(aText);
-					$( "#area" ).slideUp();
-					$( "#area" ).slideDown();
-				});
-				
-				$("#b").click(function() {
-					$( "#area" ).val(bText);
-				});
-				
-				$("#c").click(function() {
-					$( "#area" ).val(cText);
-				});
-			</script>
+	`;
+	
+	$("#a").click(function() {
+		$( "#area" ).val(aText);
+		$( "#area" ).slideUp();
+		$( "#area" ).slideDown();
+	});
+	
+	$("#b").click(function() {
+		$( "#area" ).val(bText);
+	});
+	
+	$("#c").click(function() {
+		$( "#area" ).val(cText);
+	});
+</script>
