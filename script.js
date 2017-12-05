@@ -110,7 +110,7 @@ $(function() {
 
 //POSTE DE TRAVAIL
 
-const aText = `
+const text1 = `
 Christian Vandendorpe, « Le phénomène Wikipédia : une utopie en marche », Le
 Débat 2008/1 (n° 148), p. 17-30.
 DOI 10.3917/deba.148.0017
@@ -139,10 +139,10 @@ http://mashable.france24.com/monde/20161208-wikipedia-bbc-inegalites-hommes-femm
 http://www.slate.fr/story/96963/wikipedia
 				`;
 				
-const bText = `
+const text2 = `
 Rien à signaler`;
 				
-const cText = `
+const text3 = `
 Fadyl, Marlène, William et Romain : Traitement des données et développement web
 
 Marion et Thibault : Recherche documentaire, éditorialisation et rédaction du contenu
@@ -150,18 +150,18 @@ Marion et Thibault : Recherche documentaire, éditorialisation et rédaction du 
 Emmanuelle, Rozenn et Ninon : Création de l’interface graphique
 `;
 				
-$("#a").click(function() {
-	$( "#area" ).val(aText);
+$("#desktop_source").click(function() {
+	$( "#area" ).val(text1);
+});
+
+$("#desktop_audio").click(function() {
+	$( "#area" ).val(text2);
 	$( "#area" ).slideUp();
 	$( "#area" ).slideDown();
 });
 
-$("#b").click(function() {
-	$( "#area" ).val(bText);
-});
-
-$("#c").click(function() {
-	$( "#area" ).val(cText);
+$("#desktop_contributors").click(function() {
+	$( "#area" ).val(text3);
 });
 
 //END - POSTE DE TRAVAIL
