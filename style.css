@@ -79,7 +79,9 @@ body{
 
 .icon_container .text{
 	text-align: center;
-	padding: 5px 0 5px 0;
+	margin: 5px 0 5px 0;
+	color: white;
+	font-weight : bold;
 }
 
 #menu_bottom .start{
@@ -206,4 +208,8 @@ body{
     filter:
         drop-shadow(1px 1px 1px blue)
         drop-shadow(-1px -1px 1px blue);
+}
+
+.icon_container.active .text{
+	background-color : blue;
 }
