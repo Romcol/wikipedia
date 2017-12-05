@@ -90,88 +90,89 @@
 </head>
 
 <body>
-<div id="desktop">
+    <img src="img/maracas.gif" alt="Monkey" id="monkey"/>
+    <div id="desktop">
     <div class="icon_container"><div class="icon" id="discover"><img alt="Discover" src="img/intro.svg"/><div class="text">Discover</div></div></div>
 
-    <div class="icon_container"><div class="icon wiki"><img class="wikipGray" alt="Wikipedia" src="img/lien_wiki.svg" title="Complétez l'aventure pour accéder à cet item"/></div></div>
+        <div class="icon_container"><div class="icon wiki"><img class="wikipGray" alt="Wikipedia" src="img/lien_wiki.svg" title="Complétez l'aventure pour accéder à cet item"/></div></div>
 
-    <div class="icon_container"><div class="icon poste_travail" id="poste_travail"><img alt="Poste de travail" src="img/poste_de_travail.svg"/><div class="text">Poste de travail</div></div></div>
+        <div class="icon_container"><div class="icon poste_travail" id="poste_travail"><img alt="Poste de travail" src="img/poste_de_travail.svg"/><div class="text">Poste de travail</div></div></div>
 
-    <div class="icon_container"><div class="icon corbeille" id="corbeille"><img alt="Corbeille" src="img/corbeille.svg"/><div class="text">Corbeille</div></div></div>
+        <div class="icon_container"><div class="icon corbeille" id="corbeille"><img alt="Corbeille" src="img/corbeille.svg"/><div class="text">Corbeille</div></div></div>
 
-    <div class="icon_container"><div class="icon q1" id="q1"><img alt="Question 1" src="img/q1.svg"/><div class="text">Question 1</div></div></div>
+        <div class="icon_container"><div class="icon q1" id="q1"><img alt="Question 1" src="img/q1.svg"/><div class="text">Question 1</div></div></div>
 
-    <div class="icon_container"><div class="icon q2" id="q2"><img alt="Question 2" src="img/q2.svg"/><div class="text">Question 2</div></div></div>
+        <div class="icon_container"><div class="icon q2" id="q2"><img alt="Question 2" src="img/q2.svg"/><div class="text">Question 2</div></div></div>
 
-    <div class="icon_container"><div class="icon q3" id="q3"><img alt="Question 3" src="img/q3.svg"/><div class="text">Question 3</div></div></div>
+        <div class="icon_container"><div class="icon q3" id="q3"><img alt="Question 3" src="img/q3.svg"/><div class="text">Question 3</div></div></div>
 
-    <div class="window" id="discover_window"><div class="top_bar"><div class="title">DISCOVER</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>Scover</div>
+        <div class="window" id="discover_window"><div class="top_bar"><div class="title">DISCOVER</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>Scover</div>
 
-    <div class="window" id="poste_travail_window"><div class="top_bar"><div class="title">POSTE DE TRAVAIL</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div><div class="fad-container">
-        <div class="fad-inner">
-            <div id="a" class="fad-child fad-centered" style="background-color: red;">Sources</div>
-            <div id="b" class="fad-child fad-centered" style="background-color: green;">Crédit audio</div>
-            <div id="c" class="fad-child fad-centered" style="background-color: blue;">Liste des participants</div>
-        </div>
-        <form>
-            <textarea readonly id="area" class="fad-textarea">Some text...</textarea>
-        </form>
-    </div></div>
-
-    <div class="window" id="corbeille_window"><div class="top_bar"><div class="title">CORBEILLE</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div></div>
-
-    <div class="window" id="q1_window"><div class="top_bar"><div class="title">QUESTION 1</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>
-
-        <div class="content">
-            <div class="question">En 2017, sur 100 contributeurs/contributrices de Wikipedia, combien y a t-il de femmes</div>
-            <div class="info">Placez le curser sur le nombre qui vous semble correct</div>
-            <p id="jaugeValue" >0</p>
-            <script type="text/javascript">
-                function updateTextInput(val) {
-                    document.getElementById("jaugeValue").innerHTML = val;
-                }
-            </script>
-            <input class="jauge" type="range" value="0" max="100" min="0" step="5" onchange="updateTextInput(this.value);">
-            <input type = "button" value="Valider">
-        </div>
-
-    </div>
-
-    <div class="window" id="q2_window"><div class="top_bar"><div class="title">QUESTION 2</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>
-
-        <div class="content">
-            <div class="question">Sur 100 contributeurs/contributrices de Wikipedia en 2017, combien y a t-il de femmes</div>
-            <div class="info">Selectionnez la bonne réponse</div>
+        <div class="window" id="poste_travail_window"><div class="top_bar"><div class="title">POSTE DE TRAVAIL</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div><div class="fad-container">
+            <div class="fad-inner">
+                <div id="a" class="fad-child fad-centered" style="background-color: red;">Sources</div>
+                <div id="b" class="fad-child fad-centered" style="background-color: green;">Crédit audio</div>
+                <div id="c" class="fad-child fad-centered" style="background-color: blue;">Liste des participants</div>
+            </div>
             <form>
-                <label><input type="radio" class="option-input radio" name="example" checked />20</label>
-                <label><input type="radio" class="option-input radio" name="example" />40</label>
-                <label><input type="radio" class="option-input radio" name="example" />60</label>
+                <textarea readonly id="area" class="fad-textarea">Some text...</textarea>
             </form>
-            <form   margin="20px">
-                <label><input type="radio" class="option-input2 radio" name="example" checked />20</label>
-                <label><input type="radio" class="option-input2 radio" name="example" />40</label>
-                <label><input type="radio" class="option-input2 radio" name="example" />60</label>
-            </form>
-            <input type = "button" value="Valider">
+        </div></div>
+
+        <div class="window" id="corbeille_window"><div class="top_bar"><div class="title">CORBEILLE</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div></div>
+
+        <div class="window" id="q1_window"><div class="top_bar"><div class="title">QUESTION 1</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>
+
+            <div class="content">
+                <div class="question">En 2017, sur 100 contributeurs/contributrices de Wikipedia, combien y a t-il de femmes</div>
+                <div class="info">Placez le curser sur le nombre qui vous semble correct</div>
+                <p id="jaugeValue" >0</p>
+                <script type="text/javascript">
+                    function updateTextInput(val) {
+                        document.getElementById("jaugeValue").innerHTML = val;
+                    }
+                </script>
+                <input class="jauge" type="range" value="0" max="100" min="0" step="5" onchange="updateTextInput(this.value);">
+                <input type = "button" value="Valider">
+            </div>
+
         </div>
-    </div>
 
-    <div class="window" id="q3_window">
-        <div class="top_bar">
-            <div class="title">QUESTION 3</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div>
+        <div class="window" id="q2_window"><div class="top_bar"><div class="title">QUESTION 2</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div></div>
+
+            <div class="content">
+                <div class="question">Sur 100 contributeurs/contributrices de Wikipedia en 2017, combien y a t-il de femmes</div>
+                <div class="info">Selectionnez la bonne réponse</div>
+                <form>
+                    <label><input type="radio" class="option-input radio" name="example" checked />20</label>
+                    <label><input type="radio" class="option-input radio" name="example" />40</label>
+                    <label><input type="radio" class="option-input radio" name="example" />60</label>
+                </form>
+                <form   margin="20px">
+                    <label><input type="radio" class="option-input2 radio" name="example" checked />20</label>
+                    <label><input type="radio" class="option-input2 radio" name="example" />40</label>
+                    <label><input type="radio" class="option-input2 radio" name="example" />60</label>
+                </form>
+                <input type = "button" value="Valider">
+            </div>
         </div>
-        <div style="margin-top: 20px">
-            <div class="center">Question</div>
-            <div class="center" style="font-style: italic">Cliquer sur la réponse souhaitée.</div>
 
-            <div class="center"> <div class="boite" id="boite1"> Réponse #1 </div> </div>
-            <div class="center"> <div class="boite" id="boite2"> Réponse numéro 2 sqdddddd dddddddddddddd ddddddddd ddddddddd dddddddd ddddddddddd </div> </div>
-            <div class="center"> <div class="boite" id="boite3"> Réponse n°3 </div> </div>
+        <div class="window" id="q3_window">
+            <div class="top_bar">
+                <div class="title">QUESTION 3</div><div class="controls"><div class="reduce"></div><div class="expand"></div><div class="close"></div></div>
+            </div>
+            <div style="margin-top: 20px">
+                <div class="center">Question</div>
+                <div class="center" style="font-style: italic">Cliquer sur la réponse souhaitée.</div>
 
-            <div class="center" style="text-align: center; margin-top: 2%"> <button id="validerRepItem" style="alignment: center">Valider</button> </div>
+                <div class="center"> <div class="boite" id="boite1"> Réponse #1 </div> </div>
+                <div class="center"> <div class="boite" id="boite2"> Réponse numéro 2 sqdddddd dddddddddddddd ddddddddd ddddddddd dddddddd ddddddddddd </div> </div>
+                <div class="center"> <div class="boite" id="boite3"> Réponse n°3 </div> </div>
+
+                <div class="center" style="text-align: center; margin-top: 2%"> <button id="validerRepItem" style="alignment: center">Valider</button> </div>
+            </div>
         </div>
-    </div>
 
-    <div id="menu_bottom"><div class="start">Démarrer</div><div class="bottom_container"></div><div class="time"></div> </div>
+        <div id="menu_bottom"><div class="start">Démarrer</div><div class="bottom_container"></div><div class="time"></div> </div>
 </body>
 </html>

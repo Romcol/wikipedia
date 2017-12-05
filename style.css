@@ -224,7 +224,19 @@ body{
 }
 
 .wikipGray {
-	filter: brightness(80%);
-	filter: grayscale(100%);
-    cursor: help  !important;
+    filter: brightness(80%);
+    filter: grayscale(100%);
+    cursor: help !important;
+}
+
+#monkey{
+	display: none;
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+  	left: 50%;
+  	height: 720px;
+  	width: 800px;
+  	margin-top: -400px;
+  	margin-left: -360px;
 }

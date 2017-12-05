@@ -106,6 +106,9 @@ $(function() {
 		manage_window(id);
 	});
 
+	$(".start").click(function(e){
+		$('#monkey').show(0).delay(2000).hide(0);
+	});
 
 //POSTE DE TRAVAIL
 
