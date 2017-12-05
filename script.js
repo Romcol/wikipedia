@@ -44,6 +44,12 @@ $(function() {
 
 	function manage_window(id)
 	{
+		if(id == 'discover')
+		{
+			document.onmousemove = false;
+			$(".spanstyle").hide();
+		}
+
 		$('#'+id+'_window').show();
 		$('.window').removeClass('window_above');
 		$('#'+id+'_window').addClass('window_above');
