@@ -190,8 +190,8 @@ body{
 
 .window{
 	position: absolute;
-	top : 50%;
-	left : 50%;
+	top : 20%;
+	left : 30%;
 	display: none;
 }
 
