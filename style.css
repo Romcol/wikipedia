@@ -113,7 +113,7 @@ body{
 	background-color :  #ffffff;
 }
 
-#q1_window, #q2_window{
+#q1_window, #q2_window, #q3_window{
 	width : 700px;
 	height: 350px;
 }
