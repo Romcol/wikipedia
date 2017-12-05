@@ -72,6 +72,13 @@ body{
 	box-sizing: border-box;
 }
 
+#q1_visual_window{
+
+	width: 800px;
+
+	height: 1000px;
+}
+
 .icon_container {
 	display:inline-block;
 	text-align: center;
