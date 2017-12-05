@@ -1,0 +1,44 @@
+div.center{
+    text-align: center;
+    color: black;
+}
+
+.boite{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 0.25% 2% 0.25% 2%;
+    border: 2px solid #b2e0f9;
+    border-radius: 50px;
+    display: inline-block;
+    background: white;
+}
+
+.center.boite{
+    text-align: center;
+}
+
+#boite1{
+    margin-top: 5%;
+}
+
+.boite:hover{
+    background: rgb(221, 243, 255);
+}
+
+.boiteClicked {
+    background: #b2e0f9;
+}
+
+.bonneReponse {
+    background: #b2e0f9;
+}
+
+.mauvaiseReponse{
+    background: #f8cde2;
+    text-decoration:line-through;
+    border: 2px solid #f8cde2;
+}
+
+.disabled {
+    pointer-events: none;
+}

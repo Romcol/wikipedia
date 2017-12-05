@@ -1,84 +1,93 @@
 $(function() {
 
-	$('.top_bar, .icon').on('mousedown', function (e) {
+    $('.top_bar, .icon').on('mousedown', function (e) {
 
-	    $(this).parent().addClass('active');
-	    
-	    var oTop = e.pageY - $('.active').offset().top;
-	    var oLeft = e.pageX - $('.active').offset().left;
+        $(this).parent().addClass('active');
 
-	    $(this).on('mouseup', function(e){
-	    	$(this).parent().removeClass('active');
-	    });
-	    
-	    $(this).parents().on('mousemove', function (e) {
+        var oTop = e.pageY - $('.active').offset().top;
+        var oLeft = e.pageX - $('.active').offset().left;
 
-	        $('.active').offset({
+        $(this).on('mouseup', function(e){
+            $(this).parent().removeClass('active');
+        });
 
-	            top: e.pageY - oTop,
-	            left: e.pageX - oLeft
+        $(this).parents().on('mousemove', function (e) {
 
-	        }).on('mouseup', function () {
+            $('.active').offset({
 
-	            $(this).removeClass('active');
+                top: e.pageY - oTop,
+                left: e.pageX - oLeft
 
-	        });
-	        
-	    });
+            }).on('mouseup', function () {
 
-	    return false;
-	});
+                $(this).removeClass('active');
 
-	function updateClock() {
-    var now = new Date();
-    time = now.getHours() + ':' + ((now.getMinutes()<10?'0':'') + now.getMinutes());
-    $('.time').text(time);
-    setTimeout(updateClock, 1000);
-	}
+            });
 
-	updateClock();
+         });
 
-	var tab = [];
+        return false;
+    });
 
-	tab['discover'] = 'DISCOVER';
-	tab['poste_travail'] = 'POSTE DE TRAVAIL';
-	tab['corbeille'] = 'CORBEILLE';
-	tab['q1'] = 'QUESTION 1';
-	tab['q2'] = 'QUESTION 2';
-	tab['q3'] = 'QUESTION 3';
-	tab['erreur'] = 'ERREUR';
+    function updateClock() {
+        var now = new Date();
+        time = now.getHours() + ':' + ((now.getMinutes()<10?'0':'') + now.getMinutes());
+        $('.time').text(time);
+        setTimeout(updateClock, 1000);
+    }
+
+    updateClock();
+
+    var tab = [];
+
+    tab['discover'] = 'DISCOVER';
+    tab['poste_travail'] = 'POSTE DE TRAVAIL';
+    tab['corbeille'] = 'CORBEILLE';
+    tab['q1'] = 'QUESTION 1';
+    tab['q2'] = 'QUESTION 2';
+    tab['q3'] = 'QUESTION 3';
 
 
-	var active = [];
+    var active = [];
 
-	function manage_window(id)
-	{
-		if(id == 'discover')
-		{
-			document.onmousemove = false;
-			$(".spanstyle").hide();
-		}
+    function manage_window(id)
+    {
+        if(id == 'discover')
+        {
+            document.onmousemove = false;
+            $(".spanstyle").hide();
+        }
 
-		$('#'+id+'_window').show();
-		$('.window').removeClass('window_above');
-		$('#'+id+'_window').addClass('window_above');
+        $('#'+id+'_window').show();
+        $('.window').removeClass('window_above');
+        $('#'+id+'_window').addClass('window_above');
 
-		if(!active[id])
-		{
-			$('.bottom_container').append('<div class="bottom" id="'+id+'_bottom">'+tab[id]+'</div>');
-		}
+        if(!active[id])
+        {
+            $('.bottom_container').append('<div class="bottom" id="'+id+'_bottom">'+tab[id]+'</div>');
+        }
 
-		$('.bottom').removeClass('bottom_above');
-		$('#'+id+'_bottom').addClass('bottom_above');
+        $('.bottom').removeClass('bottom_above');
+        $('#'+id+'_bottom').addClass('bottom_above');
 
-		active[id] = true;
+        active[id] = true;
 
-		$('#'+id+'_window'+' .close').on('click', function (e) {
-			console.log('test');
-			$('#'+id+'_window').hide();
-			$('#'+id+'_bottom').remove();
-			active[id] = false;
-			e.stopPropagation();
+        $('#'+id+'_window'+' .close').on('click', function (e) {
+            $('#'+id+'_window').hide();
+            $('#'+id+'_bottom').remove();
+            active[id] = false;
+            e.stopPropagation();
+        });
+
+		$('.icon').on('dblclick', function (e) {
+			var id = $(this).attr('id');
+			if(id == 'wiki')
+			{
+				manage_window('erreur');
+			}
+			else{
+				manage_window(id);
+			}
 		});
 
 		$('#'+id+'_window'+' .button_close').on('click', function (e) {
@@ -89,49 +98,43 @@ $(function() {
 			e.stopPropagation();
 		});
 
-		$('#'+id+'_window'+' .reduce').on('click', function (e) {
-			$('#'+id+'_window').hide();
-			$('#'+id+'_window').removeClass('window_above');
-			$('#'+id+'_bottom').removeClass('bottom_above');
-			e.stopPropagation();
-		});
+	    $('#'+id+'_window'+' .reduce').on('click', function (e) {
+            $('#'+id+'_window').hide();
+            $('#'+id+'_window').removeClass('window_above');
+            $('#'+id+'_bottom').removeClass('bottom_above');
+            e.stopPropagation();
+        });
 
-		$('#'+id+'_bottom').on('click', function(e){
-			$('#'+id+'_window').show();
-			$('.window').removeClass('window_above');
-			$('#'+id+'_window').addClass('window_above');
-			$('.bottom').removeClass('bottom_above');
-			$('#'+id+'_bottom').addClass('bottom_above');
+        $('#'+id+'_bottom').on('click', function(e){
+            $('#'+id+'_window').show();
+            $('.window').removeClass('window_above');
+            $('#'+id+'_window').addClass('window_above');
+            $('.bottom').removeClass('bottom_above');
+            $('#'+id+'_bottom').addClass('bottom_above');
 
-		});
+        });
 
-		$('#'+id+"_window").on('click', function(e){
-			$('.window').removeClass('window_above');
-			$('#'+id+'_window').addClass('window_above');
-			$('.bottom').removeClass('bottom_above');
-			$('#'+id+'_bottom').addClass('bottom_above');
-		});
-	}
+        $('#'+id+"_window").on('click', function(e){
+            $('.window').removeClass('window_above');
+            $('#'+id+'_window').addClass('window_above');
+            $('.bottom').removeClass('bottom_above');
+            $('#'+id+'_bottom').addClass('bottom_above');
+        });
+    }
 
 
-	$('.icon').on('dblclick', function (e) {
-		var id = $(this).attr('id');
-		if(id == 'wiki')
-		{
-			manage_window('erreur');
-		}
-		else{
-			manage_window(id);
-		}
-	});
+    $('.icon').on('dblclick', function (e) {
+        var id = $(this).attr('id');
+        manage_window(id);
+    });
 
-	$(".start").click(function(e){
-		$('#monkey').show(0).delay(2000).hide(0);
-	});
+    $(".start").click(function(e){
+        $('#monkey').show(0).delay(2000).hide(0);
+    });
 
 //POSTE DE TRAVAIL
 
-const text1 = `
+    const text1 = `
 Christian Vandendorpe, « Le phénomène Wikipédia : une utopie en marche », Le
 Débat 2008/1 (n° 148), p. 17-30.
 DOI 10.3917/deba.148.0017
@@ -159,31 +162,31 @@ http://mashable.france24.com/monde/20161208-wikipedia-bbc-inegalites-hommes-femm
 
 http://www.slate.fr/story/96963/wikipedia
 				`;
-				
-const text2 = `
+
+    const text2 = `
 Rien à signaler`;
-				
-const text3 = `
+
+    const text3 = `
 Fadyl, Marlène, William et Romain : Traitement des données et développement web
 
 Marion et Thibault : Recherche documentaire, éditorialisation et rédaction du contenu
 
 Emmanuelle, Rozenn et Ninon : Création de l’interface graphique
 `;
-				
-$("#desktop_source").click(function() {
-	$( "#area" ).val(text1);
-});
 
-$("#desktop_audio").click(function() {
-	$( "#area" ).val(text2);
-	$( "#area" ).slideUp();
-	$( "#area" ).slideDown();
-});
+    $("#desktop_source").click(function() {
+        $( "#area" ).val(text1);
+    });
 
-$("#desktop_contributors").click(function() {
-	$( "#area" ).val(text3);
-});
+    $("#desktop_audio").click(function() {
+        $( "#area" ).val(text2);
+        $( "#area" ).slideUp();
+        $( "#area" ).slideDown();
+    });
+
+    $("#desktop_contributors").click(function() {
+        $( "#area" ).val(text3);
+    });
 
 //END - POSTE DE TRAVAIL
 
