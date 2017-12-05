@@ -1,0 +1,236 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+.question{
+	margin: 10px;
+	text-align: center; 
+	font-size: 200%;
+	font-weight: bold;
+}
+
+.info{
+	margin: 20px;
+	font-size: 100%;
+	text-align: center;
+}
+
+input[type=button]{
+	margin: 20px;
+	margin-left:45%;
+ 	margin-right:50%;
+}
+
+#jaugeValue{
+	text-align: center;
+	color: #ff99ff;
+	font-size: 600%;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+}
+
+
+input[type=range].jauge {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 3px 0;
+}
+input[type=range].jauge:focus {
+  outline: none;
+}
+input[type=range].jauge::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #b2e0f9;
+  border-radius: 25px;
+  border: 0.3px solid #d9d8d8;
+}
+input[type=range].jauge::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 1.8px solid #ececec;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background: #fefefe;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.3px;
+}
+input[type=range].jauge:focus::-webkit-slider-runnable-track {
+  background: #c5e8fa;
+}
+input[type=range].jauge::-moz-range-track {
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #b2e0f9;
+  border-radius: 25px;
+  border: 0.3px solid #d9d8d8;
+}
+input[type=range].jauge::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 1.8px solid #ececec;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background: #fefefe;
+  cursor: pointer;
+}
+input[type=range].jauge::-ms-track {
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range].jauge::-ms-fill-lower {
+  background: #9fd8f8;
+  border: 0.3px solid #d9d8d8;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range].jauge::-ms-fill-upper {
+  background: #b2e0f9;
+  border: 0.3px solid #d9d8d8;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range].jauge::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 1.8px solid #ececec;
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  background: #fefefe;
+  cursor: pointer;
+  height: 14px;
+}
+input[type=range].jauge:focus::-ms-fill-lower {
+  background: #b2e0f9;
+}
+input[type=range].jauge:focus::-ms-fill-upper {
+  background: #c5e8fa;
+}
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: #40e0d0;
+}
+.option-input:checked::before {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 40px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+.option-input2.radio {
+  border: 1px solid #fff;
+  padding: 0.5em;
+  -webkit-appearance: none;
+}
+
+.option-input2.radio:checked {
+  background: red;
+  background-size: 9px 9px;
+}
+
+.option-input2.radio:focus {
+  outline-color: black;
+}
+
