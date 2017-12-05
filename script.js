@@ -1,5 +1,7 @@
 $(function() {
 
+	$('#launch_video').on('ended',function(){ $(this).hide(); });
+
     $('.top_bar, .icon').on('mousedown', function (e) {
 
         $(this).parent().addClass('active');

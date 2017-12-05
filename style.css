@@ -58,6 +58,10 @@ body{
 	cursor: url("img/default.cur"), auto;
 }
 
+#launch_video{
+	position: absolute;
+	z-index:200;
+}
 #menu_bottom{
 	background-color :  #ffffff;
 	height: 30px;
@@ -112,7 +116,10 @@ body{
 	z-index: 20;
 	background-color :  #ffffff;
 }
-
+#discover_window{
+	width: 500px;
+	height: 400px;
+}
 #q1_window, #q2_window, #q3_window{
 	width : 700px;
 	height: 350px;
