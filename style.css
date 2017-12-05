@@ -118,6 +118,18 @@ body{
 	height: 350px;
 }
 
+#erreur_window{
+	width: 400px;
+}
+
+#erreur_window img{
+	display: inline-block;
+	height: 50px;
+	width: auto;
+	margin: 0px 10px 0 10px;
+	padding:20px 10px 20px 0;
+}
+
 .window .title{
 	float:left;
 	font-weight: bold;
@@ -155,11 +167,28 @@ body{
 	display:inline-block;
 }
 
+.button_close{
+	background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: url('img/pointer.cur'), pointer;
+    font-weight: bold;
+}
+
 .window .top_bar{
 	height: 30px;
 	background-image: linear-gradient(to right, #f8cde2, #b2e0f9);
 	cursor: url('img/pointer.cur'), pointer;
 	color: white;
+}
+
+.content{
+	text-align: center;
+	padding: 10px;
 }
 
 .bottom_container{
@@ -221,12 +250,6 @@ body{
 
 .icon_container.active .text{
 	background-color : blue;
-}
-
-.wikipGray {
-    filter: brightness(80%);
-    filter: grayscale(100%);
-    cursor: help !important;
 }
 
 #monkey{
